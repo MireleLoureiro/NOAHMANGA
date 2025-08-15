@@ -1,0 +1,257 @@
+/* lista.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(/assets/papel_de_parede.jpg);
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: rgba(15, 15, 15, 0.9);
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #0051FF;
+  text-align: center;
+}
+
+.top-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#btn-manga {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 6px rgba(74, 144, 226, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#btn-manga i {
+  font-size: 18px;
+}
+
+#btn-manga:hover {
+  background-color: #357ABD;
+}
+
+table.tb {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px; /* espaço entre linhas */
+}
+
+table.tb thead tr {
+  background-color: #4a90e2; /* azul suave do login */
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  border-radius: 8px;
+}
+
+table.tb th, table.tb td {
+  padding: 12px 15px;
+}
+
+table.tb tbody tr {
+  background-color: #f9fbfd;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+}
+
+table.tb tbody tr:hover {
+  background-color: #e6f0ff;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 3px 6px rgba(74, 144, 226, 0.3);
+  margin-left: 2px;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px rgba(74, 144, 226, 0.6);
+}
+
+/* Botão Deletar: vermelho suave */
+button:nth-child(1) {
+  background-color: #e74c3c;
+  color: white;
+  box-shadow: 0 3px 6px rgba(231, 76, 60, 0.4);
+}
+
+button:nth-child(1):hover {
+  background-color: #c0392b;
+}
+
+/* Botão Editar: azul suave */
+button:nth-child(2) {
+  background-color: #4a90e2;
+  color: white;
+  box-shadow: 0 3px 6px rgba(74, 144, 226, 0.4);
+}
+
+button:nth-child(2):hover {
+  background-color: #357ABD;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .container {
+    padding: 20px 25px;
+  }
+
+  table.tb thead {
+    display: none;
+  }
+
+  table.tb, table.tb tbody, table.tb tr, table.tb td {
+    display: block;
+    width: 100%;
+  }
+
+  table.tb tr {
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  table.tb td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    font-size: 14px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  table.tb td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    color: #4a90e2;
+    font-size: 14px;
+  }
+
+  button {
+    width: 48%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px 10px;
+    align-items: stretch;
+  }
+
+  .container {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  table.tb thead {
+    display: none;
+  }
+
+  table.tb, table.tb tbody, table.tb tr, table.tb td {
+    display: block;
+    width: 100%;
+  }
+
+  table.tb tr {
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  table.tb td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    font-size: 14px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    word-wrap: break-word;
+  }
+
+  table.tb td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    color: #4a90e2;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .top-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #btn-manga {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button:nth-child(2) {
+    margin-left: 0;
+  }
+}

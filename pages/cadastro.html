@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOAHMANGÁ - Cadastro</title>
+    <link rel="stylesheet" href="../assets/cadastro.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">NOAHMANGÁ</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="../index.html">Login</a></li>
+                    <li><a href="cadastro.html" class="active">Cadastro</a></li>
+                </ul>
+            </nav>
+         </header>
+               
+        <main>
+            <section class="form-container">
+                
+                <form id="cadastro-form">
+                    <div class="form-group">
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <span class="error-message" id="nome-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                        <span class="error-message" id="password-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar Senha:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <span class="error-message" id="confirm-password-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn-primary">Cadastrar</button>
+                    </div>
+                    
+                    <div class="form-footer">
+                        <p>Já tem uma conta? <a href="../index.html">Faça login</a></p>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; NOAHMANGÁ</p>
+        </footer>
+    </div>
+
+    <script src="../scripts/cadastro.js"></script>
+</body>
+</html>

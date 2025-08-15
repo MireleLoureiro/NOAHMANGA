@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="../assets/perfil.css" />
+</head>
+<body>
+<div class="fade-overlay"></div>
+  <h1>Perfil do Usuário</h1>
+
+  <form id="perfilForm">
+    <!-- Foto do usuário -->
+    <div class="perfil-foto">
+      <img id="foto-preview" src="https://via.placeholder.com/120" alt="Foto de perfil" />
+      <input type="file" id="fotoPerfil" accept="image/*" />
+    </div>
+
+    <!-- Nome -->
+    <div class="campo">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" />
+    </div>
+
+    <!-- Email -->
+    <div class="campo">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" disabled />
+    </div>
+
+    <!-- Senha -->
+    <div class="campo">
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" />
+    </div>
+
+    <!-- Data de nascimento -->
+    <div class="campo">
+      <label for="dataNasc">Data de Nascimento:</label>
+      <input type="date" id="dataNasc" name="dataNasc" />
+    </div>
+
+    <!-- Botão -->
+    <button type="submit">Salvar</button>
+  </form>
+
+  <script src="../scripts/perfil.js"></script>
+</body>
+</html>
